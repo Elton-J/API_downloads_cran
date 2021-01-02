@@ -4,7 +4,7 @@ FROM mdancho/h2o-verse:3.30.0.1
 RUN apt-get update -qq && apt-get install -y \
   libssl-dev \
   libcurl4-gnutls-dev \
-  ibsodium-dev
+  libsodium-dev
 
 ## Install R Packages
 RUN install2.r --error --deps TRUE \
