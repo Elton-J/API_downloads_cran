@@ -3,7 +3,8 @@ FROM mdancho/h2o-verse:3.30.0.1
 # install the linux libraries needed for plumber
 RUN apt-get update -qq && apt-get install -y \
   libssl-dev \
-  libcurl4-gnutls-dev
+  libcurl4-gnutls-dev \
+  ibsodium-dev
 
 ## Install R Packages
 RUN install2.r --error --deps TRUE \
